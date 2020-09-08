@@ -1,0 +1,10 @@
+{% include 'navbar.html' %}
+
+<div>
+    <h1>Create New User</h1>
+</div>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit!">
+</form>
