@@ -3,7 +3,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render
 from twitteruser.models import TwitterProfile
 from twitteruser.forms import AddUser, SignupForm, LoginForm
-
+from django.views.generic import Templateview
 
 def index(request):
     return render(request, "index.html")
@@ -19,6 +19,7 @@ def signup_view(request):
 
     form = SignupForm()
     return render(request, "generic_form.html", {"form": form})
+    
 
 def login_view(request):
     if request.method == "POST":

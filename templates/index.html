@@ -1,5 +1,10 @@
 {% include 'navbar.html' %}
 <div class="container">
     <h1>Attack of the Twitter!</h1>
-    
+    <ul>
+        {% for tweet in tweets %}
+        <li>
+            {{tweet.text}}
+        </li>
+    </ul>
 </div>
